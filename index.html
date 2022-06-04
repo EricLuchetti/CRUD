@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <title>CRUD - Javascript</title>
+</head>
+
+<body>
+
+    <main>
+        <h1 style="font-family: 'Raleway', sans-serif;">CRUD - Javascript</h1>
+
+        <div>
+            <form id="form-crud">
+                <fieldset>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome"
+                            placeholder="Coloque seu Nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="button" class="btn btn-primary mb-3" id="btn-salvar" onclick="create()">Salvar</button>
+                <button type="button" class="btn btn-warning mb-3" id="btn-alterar" onclick="update()" disabled>Alterar</button>
+                <button type="button" class="btn btn-default mb-3" id="btn-limpar-form" onclick="limparForm()">Limpar</button>
+            </form>
+
+            <hr>
+
+            <div>
+                <h2>Lista de Mensagens</h2>
+
+                <form class="form-search">
+                    <input id="busca" type="text" style="width: 52%;" placeholder="Buscar por nome ou email">
+                    <button type="button" id="botao_busca" style="width: 100px;" onclick="filtrar()">Buscar</button>
+                </form>
+
+                <br>
+                
+                <button type="button" class="btn btn-danger mb-3" id="btn-limpar-lista" onclick="limparLista()">Excluir Todos</button>
+
+                <div style="width: 100%;" class="row" id="lista"></div>
+            </div>
+            
+        </div>
+        
+    </main>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
